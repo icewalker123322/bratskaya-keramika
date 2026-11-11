@@ -35,7 +35,8 @@ try{
  assert(await evaluate('window.__cmsLoaded===true'),'real public Supabase content loaded');
  assert(await evaluate('!performance.getEntriesByType("resource").some(r=>new URL(r.name).hostname==="esm.sh")'),'public page does not load auth CDN');
  assert(await evaluate('Object.keys(sessionStorage).length===0 && document.cookie===""'),'public page has no app session or cookies');
- assert(await evaluate('[...document.images].every(i=>i.complete && i.naturalWidth>0 || i.closest("dialog"))'),'public images loaded');
+ const brokenImages=await evaluate(`Promise.all([...document.images].filter(i=>!i.closest('dialog')).map(async i=>{i.loading='eager';try{await Promise.race([i.decode(),new Promise((_,reject)=>setTimeout(()=>reject(Error('timeout')),15000))]);return null;}catch{return i.src;}})).then(images=>images.filter(Boolean))`);
+ assert(brokenImages.length===0,'public images loaded'+(brokenImages.length?': '+brokenImages.join(', '):''));
  assert(await evaluate('document.querySelectorAll(".gallery-item").length===5 && document.querySelectorAll(".class-card").length===3'),'original fallback content');
  await evaluate('document.querySelector("[data-filter=figures]").click()');
  assert(await evaluate('[...document.querySelectorAll(".class-card")].filter(e=>!e.hidden).length===1'),'original filters');
