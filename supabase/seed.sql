@@ -97,3 +97,10 @@ insert into public.site_content (id,section,label,kind,data,position,published) 
 ('text-73','Контакты','Наверх ↑','text','{"text": "Наверх ↑"}'::jsonb,0,true),
 ('settings','Настройки','Название и SEO','settings','{"title": "Братская керамика — мастерская в Братске", "description": "Братская керамика в Братске. Керамика ручной работы, творчество и знакомство с глиной. Посмотрите работы и подберите занятие."}'::jsonb,0,true)
 on conflict (id) do nothing;
+
+insert into public.site_content (id,section,label,kind,data,position,published) values
+('link-telegram-bot','Контакты','Telegram-бот мастерской','link','{"href": "https://t.me/BratMasterBot"}'::jsonb,0,true),
+('text-bot-label','Контакты','Подпись Telegram-бота','text','{"text": "Telegram-бот"}'::jsonb,0,true),
+('text-bot-title','Контакты','Имя Telegram-бота','text','{"text": "@BratMasterBot"}'::jsonb,0,true),
+('text-bot-caption','Контакты','Кнопка Telegram-бота','text','{"text": "Написать в Telegram"}'::jsonb,0,true)
+on conflict (id) do nothing;

@@ -37,11 +37,19 @@ try{
  assert(await evaluate('Object.keys(sessionStorage).length===0 && document.cookie===""'),'public page has no app session or cookies');
  const brokenImages=await evaluate(`Promise.all([...document.images].filter(i=>!i.closest('dialog')).map(async i=>{i.loading='eager';try{await Promise.race([i.decode(),new Promise((_,reject)=>setTimeout(()=>reject(Error('timeout')),15000))]);return null;}catch{return i.src;}})).then(images=>images.filter(Boolean))`);
  assert(brokenImages.length===0,'public images loaded'+(brokenImages.length?': '+brokenImages.join(', '):''));
+ assert(await evaluate('document.querySelectorAll(".brand-logo").length===2 && !document.querySelector(".brand-mark")'),'client logo replaces both old marks');
+ assert(await evaluate('document.querySelector(".social-bot").href==="https://t.me/BratMasterBot" && document.querySelector(".social-bot").textContent.includes("@BratMasterBot")'),'Telegram bot contact survives CMS load');
+ for(const width of [360,390,768,1440]){
+  await call('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:width<800});
+  assert(await evaluate('document.documentElement.scrollWidth<=innerWidth'),`logo and contacts width ${width}`);
+  if(width===390){await evaluate('scrollTo(0,0)');await writeFile('qa-artifacts/logo-mobile-header.png',Buffer.from((await call('Page.captureScreenshot',{format:'png'})).data,'base64'));await evaluate('document.querySelector(".social-bot").scrollIntoView({block:"center",behavior:"instant"})');await writeFile('qa-artifacts/logo-mobile-contacts.png',Buffer.from((await call('Page.captureScreenshot',{format:'png'})).data,'base64'));}
+ }
+ await evaluate('scrollTo(0,0)');await writeFile('qa-artifacts/logo-desktop.png',Buffer.from((await call('Page.captureScreenshot',{format:'png'})).data,'base64'));
  assert(await evaluate('document.querySelectorAll(".gallery-item").length===5 && document.querySelectorAll(".class-card").length===3'),'original fallback content');
  await evaluate('document.querySelector("[data-filter=figures]").click()');
  assert(await evaluate('[...document.querySelectorAll(".class-card")].filter(e=>!e.hidden).length===1'),'original filters');
  await evaluate('document.querySelector(".gallery-item").click()');assert(await evaluate('document.querySelector("#lightbox").open'),'original gallery');await evaluate('document.querySelector("#lightbox").close()');
- await evaluate(`(async()=>{const {applyContent}=await import('./cms-render.js');const rows=await (await fetch('./cms-seed.json')).json();rows.find(r=>r.kind==='text').data.text='<img src=x onerror=alert(1)>';rows.push({...rows.find(r=>r.kind==='gallery'),id:'qa-new',data:{...rows.find(r=>r.kind==='gallery').data,title:'QA photo'}});applyContent(rows);})()`);
+ await evaluate(`(async()=>{const {applyContent}=await import('./cms-render.js');const rows=await (await fetch('./cms-seed.json')).json();rows.find(r=>r.id===document.querySelector('[data-cms-text]').dataset.cmsText).data.text='<img src=x onerror=alert(1)>';rows.push({...rows.find(r=>r.kind==='gallery'),id:'qa-new',data:{...rows.find(r=>r.kind==='gallery').data,title:'QA photo'}});applyContent(rows);})()`);
  assert(await evaluate('document.querySelectorAll(".gallery-item").length===6'),'dynamic collection addition');
  assert(await evaluate('document.querySelector("[data-cms-text]").textContent.includes("<img") && !document.querySelector("[data-cms-text] img")'),'XSS text escaping');
  await evaluate('document.querySelectorAll(".gallery-item")[5].click()');assert(await evaluate('document.querySelector("#lightbox").open && document.querySelector("#lightbox figcaption").textContent.includes("6 / 6")'),'dynamic gallery lightbox');await evaluate('document.querySelector("#lightbox").close()');

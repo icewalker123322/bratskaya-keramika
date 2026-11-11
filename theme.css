@@ -76,3 +76,14 @@
 dialog::backdrop { background: #251b16c9; }
 .lightbox .close, .lightbox-prev, .lightbox-next { background: #fffaf2; color: #3c2b24; }
 .lightbox figcaption { color: #fffaf2; }
+
+/* Original client logo, framed with CSS without redrawing the artwork. */
+.brand { flex-shrink: 0; }
+.brand-image { position: relative; display: block; width: 208px; max-width: 100%; aspect-ratio: 850 / 400; overflow: hidden; border-radius: 10px; background: #252624; }
+.brand .brand-logo { position: absolute; display: block; width: 150.588%; max-width: none; height: 160%; left: -24.118%; top: -22.5%; object-fit: fill; }
+.footer-bottom .brand-image { width: 224px; }
+.social-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.social-links .social-card:last-child { grid-column: auto; }
+@media (max-width: 1100px) { .social-links { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .brand-image, .footer-bottom .brand-image { width: 190px; } }
+@media (max-width: 600px) { .social-links { grid-template-columns: minmax(0, 1fr); } }

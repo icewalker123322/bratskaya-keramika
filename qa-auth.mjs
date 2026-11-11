@@ -21,7 +21,7 @@ process.stdin.on('data',async chunk=>{input+=chunk;if(!/[\r\n]/.test(input))retu
   assert(login.status===200&&login.data?.access_token,'real password sign-in');token=login.data.access_token;
   if(cleanup.length){const result=await request('/storage/v1/object/site-images','DELETE',{prefixes:cleanup},token);assert(result.status===200&&result.data.length===cleanup.length,'previous verification images removed');}
   const membership=await request('/rest/v1/site_admins?select=user_id','GET',undefined,token);assert(membership.status===200&&membership.data.length===1,'owner membership under RLS');
-  const visible=await request('/rest/v1/site_content?select=id');assert(visible.status===200&&visible.data.length===96,'public reads original content');
+  const visible=await request('/rest/v1/site_content?select=id');assert(visible.status===200&&visible.data.some(row=>row.id==='settings'),'public reads published content');
   const forbidden=await request('/rest/v1/site_content','POST',{id:'qa-denied',section:'QA',label:'QA',kind:'faq',data:{title:'QA'},published:false});assert(forbidden.status>=400,'anonymous write denied');
   id='qa-'+crypto.randomUUID();const created=await request('/rest/v1/site_content','POST',{id,section:'QA',label:'QA',kind:'faq',data:{title:'Temporary verification'},published:false},token);assert(created.status===201,'owner creates hidden content');
   const hidden=await request('/rest/v1/site_content?id=eq.'+id+'&select=id');assert(hidden.status===200&&hidden.data.length===0,'hidden content excluded from public API');

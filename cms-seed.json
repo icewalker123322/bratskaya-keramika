@@ -1102,5 +1102,49 @@
     },
     "position": 0,
     "published": true
+  },
+  {
+    "id": "link-telegram-bot",
+    "section": "Контакты",
+    "label": "Telegram-бот мастерской",
+    "kind": "link",
+    "data": {
+      "href": "https://t.me/BratMasterBot"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-bot-label",
+    "section": "Контакты",
+    "label": "Подпись Telegram-бота",
+    "kind": "text",
+    "data": {
+      "text": "Telegram-бот"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-bot-title",
+    "section": "Контакты",
+    "label": "Имя Telegram-бота",
+    "kind": "text",
+    "data": {
+      "text": "@BratMasterBot"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-bot-caption",
+    "section": "Контакты",
+    "label": "Кнопка Telegram-бота",
+    "kind": "text",
+    "data": {
+      "text": "Написать в Telegram"
+    },
+    "position": 0,
+    "published": true
   }
 ]
