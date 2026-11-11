@@ -1,0 +1,1106 @@
+[
+  {
+    "id": "class-1",
+    "section": "Мастер-классы",
+    "label": "Посуда с характером",
+    "kind": "class",
+    "data": {
+      "image": "assets/koi-bowl.jpg",
+      "alt": "Чаша насыщенного синего цвета с фигуркой рыбки",
+      "title": "Посуда с характером",
+      "description": "Чаша с неровным краем, тарелка с рыбкой или кружка для любимого чая. Всё начинается с вашей идеи.",
+      "category": "pottery",
+      "meta1": "Ручная лепка",
+      "meta2": "Своими руками"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "class-2",
+    "section": "Мастер-классы",
+    "label": "Ваш маленький герой",
+    "kind": "class",
+    "data": {
+      "image": "assets/figurines.jpg",
+      "alt": "Четыре керамические фигурки животных: два кота, заяц и медведь",
+      "title": "Ваш маленький герой",
+      "description": "Кот, зайчик или кто-то совсем необычный. Идея для тех, кто любит придумывать истории.",
+      "category": "figures",
+      "meta1": "Керамические фигурки",
+      "meta2": "Простор фантазии"
+    },
+    "position": 1,
+    "published": true
+  },
+  {
+    "id": "class-3",
+    "section": "Мастер-классы",
+    "label": "Добавить свой цвет",
+    "kind": "class",
+    "data": {
+      "image": "assets/workshop.jpg",
+      "alt": "Расписанные керамические изделия и рабочие инструменты в мастерской",
+      "title": "Добавить свой цвет",
+      "description": "Линии, пятна, любимые оттенки. Выберите роспись как направление для будущего занятия.",
+      "category": "painting",
+      "meta1": "Роспись",
+      "meta2": "Каждый узор свой"
+    },
+    "position": 2,
+    "published": true
+  },
+  {
+    "id": "gallery-1",
+    "section": "Галерея",
+    "label": "Маленькие герои",
+    "kind": "gallery",
+    "data": {
+      "image": "assets/figurines.jpg",
+      "alt": "Керамические животные, созданные в мастерской",
+      "title": "Маленькие герои",
+      "caption": "Маленькие герои из глины",
+      "shape": "tall"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "gallery-2",
+    "section": "Галерея",
+    "label": "Синий, в котором живёт рыбка",
+    "kind": "gallery",
+    "data": {
+      "image": "assets/koi-bowl.jpg",
+      "alt": "Синяя чаша с карпом кои",
+      "title": "Синий, в котором живёт рыбка",
+      "caption": "Синий, в котором живёт рыбка",
+      "shape": ""
+    },
+    "position": 1,
+    "published": true
+  },
+  {
+    "id": "gallery-3",
+    "section": "Галерея",
+    "label": "В процессе",
+    "kind": "gallery",
+    "data": {
+      "image": "assets/workshop.jpg",
+      "alt": "Процесс работы и керамические изделия на столе",
+      "title": "В процессе",
+      "caption": "Между идеей и готовой вещью",
+      "shape": ""
+    },
+    "position": 2,
+    "published": true
+  },
+  {
+    "id": "gallery-4",
+    "section": "Галерея",
+    "label": "Тихие детали",
+    "kind": "gallery",
+    "data": {
+      "image": "assets/still-life.jpg",
+      "alt": "Керамические подсвечники и кисти",
+      "title": "Тихие детали",
+      "caption": "Тихие детали мастерской",
+      "shape": "wide"
+    },
+    "position": 3,
+    "published": true
+  },
+  {
+    "id": "gallery-5",
+    "section": "Галерея",
+    "label": "Творчество вокруг",
+    "kind": "gallery",
+    "data": {
+      "image": "assets/gallery-wall.jpg",
+      "alt": "Картины на стене мастерской между высокими окнами",
+      "title": "Творчество вокруг",
+      "caption": "Творчество вокруг нас",
+      "shape": ""
+    },
+    "position": 4,
+    "published": true
+  },
+  {
+    "id": "benefit-1",
+    "section": "Развитие",
+    "label": "Мыслить объёмно",
+    "kind": "benefit",
+    "data": {
+      "title": "Мыслить объёмно",
+      "description": "Дети учатся переводить плоский рисунок в трёхмерный объект и знакомятся с симметрией, балансом и пропорциями."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "benefit-2",
+    "section": "Развитие",
+    "label": "Пробовать заново",
+    "kind": "benefit",
+    "data": {
+      "title": "Пробовать заново",
+      "description": "Если что-то пошло не так, глину можно смять и начать заново. Это помогает не бояться пробовать снова."
+    },
+    "position": 1,
+    "published": true
+  },
+  {
+    "id": "benefit-3",
+    "section": "Развитие",
+    "label": "Внимание к процессу",
+    "kind": "benefit",
+    "data": {
+      "title": "Внимание к процессу",
+      "description": "Гончарное дело и ручная лепка требуют времени и фокуса. За работой с глиной можно замедлиться и сосредоточиться на одном процессе."
+    },
+    "position": 2,
+    "published": true
+  },
+  {
+    "id": "faq-1",
+    "section": "Вопросы",
+    "label": "Я никогда не работал с глиной. С чего начать?",
+    "kind": "faq",
+    "data": {
+      "title": "Я никогда не работал с глиной. С чего начать?",
+      "description": "Начните со знакомства с направлениями: ручная лепка посуды, фигурки или роспись керамики. О каждом из них можно узнать у мастерской."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "faq-2",
+    "section": "Вопросы",
+    "label": "Где посмотреть расписание и стоимость?",
+    "kind": "faq",
+    "data": {
+      "title": "Где посмотреть расписание и стоимость?",
+      "description": "Актуальное расписание и стоимость можно узнать у мастерской. Все контакты — в конце страницы."
+    },
+    "position": 1,
+    "published": true
+  },
+  {
+    "id": "faq-3",
+    "section": "Вопросы",
+    "label": "Можно прийти с ребёнком или компанией?",
+    "kind": "faq",
+    "data": {
+      "title": "Можно прийти с ребёнком или компанией?",
+      "description": "Подходящий возраст участников, размер группы и возможность занятия с ребёнком или компанией уточните у мастерской."
+    },
+    "position": 2,
+    "published": true
+  },
+  {
+    "id": "faq-4",
+    "section": "Вопросы",
+    "label": "Когда можно забрать готовую работу?",
+    "kind": "faq",
+    "data": {
+      "title": "Когда можно забрать готовую работу?",
+      "description": "Это зависит от изделия, сушки, обжига и покрытия. Точный порядок работы и срок готовности уточните перед занятием."
+    },
+    "position": 3,
+    "published": true
+  },
+  {
+    "id": "image-0",
+    "section": "Фотографии",
+    "label": "Тёплый свет свечей, керамические подсвечники и кисти в нашей мастерской",
+    "kind": "image",
+    "data": {
+      "image": "assets/still-life.jpg",
+      "alt": "Тёплый свет свечей, керамические подсвечники и кисти в нашей мастерской"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "image-4",
+    "section": "Фотографии",
+    "label": "Рабочий стол с керамическими изделиями и инструментами в мастерской",
+    "kind": "image",
+    "data": {
+      "image": "assets/workshop.jpg",
+      "alt": "Рабочий стол с керамическими изделиями и инструментами в мастерской"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "link-0",
+    "section": "Контакты",
+    "label": "Телефон",
+    "kind": "link",
+    "data": {
+      "href": "tel:+79041131199"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "link-1",
+    "section": "Контакты",
+    "label": "ВКонтакте",
+    "kind": "link",
+    "data": {
+      "href": "https://vk.ru/bratskakeramika"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "link-2",
+    "section": "Контакты",
+    "label": "Telegram",
+    "kind": "link",
+    "data": {
+      "href": "https://t.me/ceramicapobratski"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "link-3",
+    "section": "Контакты",
+    "label": "МАКС",
+    "kind": "link",
+    "data": {
+      "href": "https://max.ru/join/e88LbVz2ahDmUobrtgbGm3PuUN6_jGuYoAv6tXh1P_s"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "link-4",
+    "section": "Контакты",
+    "label": "Адрес мастерской",
+    "kind": "link",
+    "data": {
+      "href": "https://yandex.ru/maps/?text=%D0%91%D1%80%D0%B0%D1%82%D1%81%D0%BA%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%93%D0%B8%D0%BD%D0%B4%D0%B8%D0%BD%D0%B0%206"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-1",
+    "section": "Навигация",
+    "label": "Братская",
+    "kind": "text",
+    "data": {
+      "text": "Братская"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-2",
+    "section": "Навигация",
+    "label": "керамика",
+    "kind": "text",
+    "data": {
+      "text": "керамика"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-3",
+    "section": "Навигация",
+    "label": "Мастер-классы",
+    "kind": "text",
+    "data": {
+      "text": "Мастер-классы"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-4",
+    "section": "Навигация",
+    "label": "Наши работы",
+    "kind": "text",
+    "data": {
+      "text": "Наши работы"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-5",
+    "section": "Навигация",
+    "label": "Мастерская",
+    "kind": "text",
+    "data": {
+      "text": "Мастерская"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-6",
+    "section": "Навигация",
+    "label": "Контакты",
+    "kind": "text",
+    "data": {
+      "text": "Контакты"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-7",
+    "section": "Навигация",
+    "label": "Меню",
+    "kind": "text",
+    "data": {
+      "text": "Меню "
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-8",
+    "section": "Навигация",
+    "label": "＋",
+    "kind": "text",
+    "data": {
+      "text": "＋"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-9",
+    "section": "Главная",
+    "label": "Керамическая мастерская · Братск",
+    "kind": "text",
+    "data": {
+      "text": " Керамическая мастерская · Братск"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-10",
+    "section": "Главная",
+    "label": "Керамика,",
+    "kind": "text",
+    "data": {
+      "text": "Керамика,"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-11",
+    "section": "Главная",
+    "label": "в которой",
+    "kind": "text",
+    "data": {
+      "text": "в которой"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-12",
+    "section": "Главная",
+    "label": "тепло ваших рук",
+    "kind": "text",
+    "data": {
+      "text": "тепло ваших рук"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-13",
+    "section": "Главная",
+    "label": "Мастерская в Братске для тех, кто хочет замедлиться, познакомиться с г",
+    "kind": "text",
+    "data": {
+      "text": "Мастерская в Братске для тех, кто хочет замедлиться, познакомиться с глиной и создать свою особенную вещь."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-14",
+    "section": "Главная",
+    "label": "Маленькие радости нашей мастерской",
+    "kind": "text",
+    "data": {
+      "text": "Маленькие радости нашей мастерской"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-15",
+    "section": "Главная",
+    "label": "Братская керамика",
+    "kind": "text",
+    "data": {
+      "text": "Братская керамика"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-16",
+    "section": "classes",
+    "label": "Мастер-классы",
+    "kind": "text",
+    "data": {
+      "text": "Мастер-классы"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-17",
+    "section": "classes",
+    "label": "Что хочется",
+    "kind": "text",
+    "data": {
+      "text": "Что хочется"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-18",
+    "section": "classes",
+    "label": "создать?",
+    "kind": "text",
+    "data": {
+      "text": "создать?"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-19",
+    "section": "classes",
+    "label": "Чашку для любимого чая, маленького друга или просто хорошее воспоминан",
+    "kind": "text",
+    "data": {
+      "text": "Чашку для любимого чая, маленького друга или просто хорошее воспоминание."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-20",
+    "section": "classes",
+    "label": "Все направления",
+    "kind": "text",
+    "data": {
+      "text": "Все направления"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-21",
+    "section": "classes",
+    "label": "Посуда",
+    "kind": "text",
+    "data": {
+      "text": "Посуда"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-22",
+    "section": "classes",
+    "label": "Фигурки",
+    "kind": "text",
+    "data": {
+      "text": "Фигурки"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-23",
+    "section": "classes",
+    "label": "Роспись",
+    "kind": "text",
+    "data": {
+      "text": "Роспись"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-24",
+    "section": "classes",
+    "label": "Направления для знакомства с керамикой. Доступные мастер-классы, возра",
+    "kind": "text",
+    "data": {
+      "text": "Направления для знакомства с керамикой. Доступные мастер-классы, возраст участников, стоимость и ближайшие даты уточняются у мастерской."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-25",
+    "section": "studio",
+    "label": "Наша мастерская",
+    "kind": "text",
+    "data": {
+      "text": "Наша мастерская"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-26",
+    "section": "studio",
+    "label": "Здесь можно",
+    "kind": "text",
+    "data": {
+      "text": "Здесь можно"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-27",
+    "section": "studio",
+    "label": "чуть",
+    "kind": "text",
+    "data": {
+      "text": "чуть "
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-28",
+    "section": "studio",
+    "label": "медленнее",
+    "kind": "text",
+    "data": {
+      "text": "медленнее"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-29",
+    "section": "studio",
+    "label": "Глина запоминает прикосновения. Небольшую неровность края, след пальца",
+    "kind": "text",
+    "data": {
+      "text": "Глина запоминает прикосновения. Небольшую неровность края, след пальца, выбранный вами цвет. Из этих деталей и складывается вещь, которой больше ни у кого нет."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-30",
+    "section": "studio",
+    "label": "На фотографиях — наши работы и пространство, где они рождаются. Здесь ",
+    "kind": "text",
+    "data": {
+      "text": "На фотографиях — наши работы и пространство, где они рождаются. Здесь рядом живут керамика, живопись и простое удовольствие делать что-то руками."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-31",
+    "section": "studio",
+    "label": "Заглянуть в мастерскую",
+    "kind": "text",
+    "data": {
+      "text": "Заглянуть в мастерскую "
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-32",
+    "section": "studio",
+    "label": "↓",
+    "kind": "text",
+    "data": {
+      "text": "↓"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-33",
+    "section": "benefits",
+    "label": "Творчество и развитие",
+    "kind": "text",
+    "data": {
+      "text": "Творчество и развитие"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-34",
+    "section": "benefits",
+    "label": "Больше, чем",
+    "kind": "text",
+    "data": {
+      "text": "Больше, чем"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-35",
+    "section": "benefits",
+    "label": "просто лепка",
+    "kind": "text",
+    "data": {
+      "text": "просто лепка"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-36",
+    "section": "benefits",
+    "label": "Работа с глиной — это творчество, терпение и маленькие открытия.",
+    "kind": "text",
+    "data": {
+      "text": "Работа с глиной — это творчество, терпение и маленькие открытия."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-37",
+    "section": "benefits",
+    "label": "Родители, готовьте полки",
+    "kind": "text",
+    "data": {
+      "text": "Родители, готовьте полки"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-38",
+    "section": "benefits",
+    "label": "для изделий из керамики!",
+    "kind": "text",
+    "data": {
+      "text": "для изделий из керамики!"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-39",
+    "section": "works",
+    "label": "Работы из мастерской",
+    "kind": "text",
+    "data": {
+      "text": "Работы из мастерской"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-40",
+    "section": "works",
+    "label": "Уже",
+    "kind": "text",
+    "data": {
+      "text": "Уже "
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-41",
+    "section": "works",
+    "label": "получилось",
+    "kind": "text",
+    "data": {
+      "text": "получилось"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-42",
+    "section": "works",
+    "label": "Разные формы. Разные характеры. Настоящие работы из мастерской. Нажмит",
+    "kind": "text",
+    "data": {
+      "text": "Разные формы. Разные характеры. Настоящие работы из мастерской. Нажмите, чтобы рассмотреть ближе."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-43",
+    "section": "Главная",
+    "label": "Перед первым занятием",
+    "kind": "text",
+    "data": {
+      "text": "Перед первым занятием"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-44",
+    "section": "Главная",
+    "label": "Можно",
+    "kind": "text",
+    "data": {
+      "text": "Можно "
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-45",
+    "section": "Главная",
+    "label": "спросить",
+    "kind": "text",
+    "data": {
+      "text": "спросить"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-46",
+    "section": "Контакты",
+    "label": "Контакты",
+    "kind": "text",
+    "data": {
+      "text": "Контакты"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-47",
+    "section": "Контакты",
+    "label": "До встречи",
+    "kind": "text",
+    "data": {
+      "text": "До встречи"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-48",
+    "section": "Контакты",
+    "label": "в «Братской керамике»",
+    "kind": "text",
+    "data": {
+      "text": "в «Братской керамике»"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-49",
+    "section": "Контакты",
+    "label": "Позвоните нам или загляните в наши соцсети.",
+    "kind": "text",
+    "data": {
+      "text": "Позвоните нам или загляните в наши соцсети."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-50",
+    "section": "Контакты",
+    "label": "Расскажем о мастерской и ответим на ваши вопросы.",
+    "kind": "text",
+    "data": {
+      "text": "Расскажем о мастерской и ответим на ваши вопросы."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-51",
+    "section": "Главная",
+    "label": "Будем на связи",
+    "kind": "text",
+    "data": {
+      "text": "Будем на связи"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-52",
+    "section": "Главная",
+    "label": "Вопросы и новости мастерской — выбирайте, как вам удобно.",
+    "kind": "text",
+    "data": {
+      "text": "Вопросы и новости мастерской — выбирайте, как вам удобно."
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-53",
+    "section": "Главная",
+    "label": "Телефон",
+    "kind": "text",
+    "data": {
+      "text": "Телефон"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-54",
+    "section": "Главная",
+    "label": "8 (904) 113-11-99",
+    "kind": "text",
+    "data": {
+      "text": "8 (904) 113-11-99"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-55",
+    "section": "Главная",
+    "label": "Позвонить в мастерскую",
+    "kind": "text",
+    "data": {
+      "text": "Позвонить в мастерскую"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-56",
+    "section": "Главная",
+    "label": "ВКонтакте",
+    "kind": "text",
+    "data": {
+      "text": "ВКонтакте"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-57",
+    "section": "Главная",
+    "label": "Мы в ВК",
+    "kind": "text",
+    "data": {
+      "text": "Мы в ВК"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-58",
+    "section": "Главная",
+    "label": "vk.ru/bratskakeramika",
+    "kind": "text",
+    "data": {
+      "text": "vk.ru/bratskakeramika"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-59",
+    "section": "Главная",
+    "label": "Telegram",
+    "kind": "text",
+    "data": {
+      "text": "Telegram"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-60",
+    "section": "Главная",
+    "label": "Наш Telegram",
+    "kind": "text",
+    "data": {
+      "text": "Наш Telegram"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-61",
+    "section": "Главная",
+    "label": "@ceramicapobratski",
+    "kind": "text",
+    "data": {
+      "text": "@ceramicapobratski"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-62",
+    "section": "Главная",
+    "label": "МАКС",
+    "kind": "text",
+    "data": {
+      "text": "МАКС"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-63",
+    "section": "Главная",
+    "label": "Мы в МАКС",
+    "kind": "text",
+    "data": {
+      "text": "Мы в МАКС"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-64",
+    "section": "Главная",
+    "label": "Присоединиться",
+    "kind": "text",
+    "data": {
+      "text": "Присоединиться"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-65",
+    "section": "Главная",
+    "label": "Адрес мастерской",
+    "kind": "text",
+    "data": {
+      "text": "Адрес мастерской"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-66",
+    "section": "Главная",
+    "label": "Братск,",
+    "kind": "text",
+    "data": {
+      "text": "Братск,"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-67",
+    "section": "Главная",
+    "label": "улица Гиндина, 6",
+    "kind": "text",
+    "data": {
+      "text": "улица Гиндина, 6"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-68",
+    "section": "Главная",
+    "label": "Открыть на карте",
+    "kind": "text",
+    "data": {
+      "text": "Открыть на карте"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-69",
+    "section": "Контакты",
+    "label": "Братская",
+    "kind": "text",
+    "data": {
+      "text": "Братская"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-70",
+    "section": "Контакты",
+    "label": "керамика",
+    "kind": "text",
+    "data": {
+      "text": "керамика"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-71",
+    "section": "Контакты",
+    "label": "©",
+    "kind": "text",
+    "data": {
+      "text": "© "
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-72",
+    "section": "Контакты",
+    "label": "Братская керамика",
+    "kind": "text",
+    "data": {
+      "text": " Братская керамика"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "text-73",
+    "section": "Контакты",
+    "label": "Наверх ↑",
+    "kind": "text",
+    "data": {
+      "text": "Наверх ↑"
+    },
+    "position": 0,
+    "published": true
+  },
+  {
+    "id": "settings",
+    "section": "Настройки",
+    "label": "Название и SEO",
+    "kind": "settings",
+    "data": {
+      "title": "Братская керамика — мастерская в Братске",
+      "description": "Братская керамика в Братске. Керамика ручной работы, творчество и знакомство с глиной. Посмотрите работы и подберите занятие."
+    },
+    "position": 0,
+    "published": true
+  }
+]

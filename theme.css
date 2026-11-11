@@ -1,0 +1,78 @@
+﻿/* Fired clay, warm porcelain, and dark cacao. */
+:root {
+  color-scheme: light;
+  --paper: #f7f1e7;
+  --surface: #fffdf8;
+  --raised: #e9ded0;
+  --ink: #3c2b24;
+  --secondary: #66574b;
+  --muted: #706053;
+  --line: #5b403126;
+  --accent: #945136;
+  --clay: #945136;
+  --cacao: #3c2b24;
+  --peach: #edc4a3;
+}
+::selection { background: #edc4a3; color: #3c2b24; }
+.header { border-bottom: 1px solid var(--line); }
+.brand-mark { color: var(--clay); }
+.hero h1 em { color: var(--clay); }
+.dark { background: var(--clay); color: #fffdf8; }
+.dark:hover { background: #783f29; }
+.secondary { background: #e9ded0; color: var(--ink); }
+.secondary:hover { background: #dfcdbb; }
+.class-filters button:hover { background: #e9ded0; }
+.class-filters button.active {
+  background: var(--cacao);
+  color: #fffdf8;
+  border-color: var(--cacao);
+}
+.class-card { background: #fffdf8; border-color: #e2d6c7; }
+.class-card h3 { color: var(--cacao); }
+.class-card .text-link { color: var(--clay); border-color: #94513640; }
+.class-card .text-link:hover { color: #783f29; border-color: #783f29; }
+.image-arrow { background: #fffdf8; color: var(--clay); }
+.hero-main figcaption { background: #e9ded0; }
+.studio { background: #ede1d2; }
+.works { background: #fffaf2; }
+.last-call {
+  --ink: #fff5e9;
+  --secondary: #e1cdbb;
+  --accent: #edc4a3;
+  --line: #fff5e933;
+  background: var(--cacao);
+  color: var(--ink);
+}
+.last-call .dark { background: var(--peach); color: var(--cacao); }
+.last-call .dark:hover { background: #f5d8bd; }
+.contact-footer { background: #e9ded0; border-top: 1px solid var(--line); }
+.contact-value:hover, .back-top:hover { color: var(--clay); }
+.social-contacts {
+  --ink: #fff5e9;
+  --secondary: #e1cdbb;
+  --muted: #e1cdbb;
+  --accent: #edc4a3;
+  --line: #fff5e933;
+  background: var(--cacao);
+  color: var(--ink);
+}
+.social-heading p { color: var(--secondary); }
+.social-card {
+  --ink: #3c2b24;
+  --secondary: #49382e;
+  --muted: #49382e;
+  --accent: #945136;
+  background: #c7ad95;
+  color: var(--ink);
+  border-color: #c7ad95;
+}
+.social-card:hover { background: #bea189; border-color: #bea189; }
+.social-label { color: var(--secondary); }
+.social-card:focus-visible { outline-color: var(--peach); }
+.booking { background: #fffaf2; }
+.booking input, .booking select, .booking textarea { border-color: #5b403140; }
+.booking .close { background: #e9ded0; }
+.booking pre { background: #e9ded0; }
+dialog::backdrop { background: #251b16c9; }
+.lightbox .close, .lightbox-prev, .lightbox-next { background: #fffaf2; color: #3c2b24; }
+.lightbox figcaption { color: #fffaf2; }
