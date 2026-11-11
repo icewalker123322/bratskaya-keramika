@@ -1,6 +1,21 @@
 export const BUCKET = 'site-images';
 export const MAX_FILE = 5 * 1024 * 1024;
 let client;
+export async function publicContent() {
+  const c = window.CMS_CONFIG;
+  if (!/^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/.test(c?.url || '') || !c?.publishableKey) throw new Error('CMS не подключена.');
+  const rows = [];
+  for (let offset=0; ; offset+=500) {
+    const url = new URL('/rest/v1/site_content', c.url);
+    url.search = new URLSearchParams({select:'id,kind,data,position,published',published:'eq.true',order:'position.asc,id.asc',offset:String(offset),limit:'500'});
+    const response = await fetch(url, {headers:{apikey:c.publishableKey},credentials:'omit',referrerPolicy:'no-referrer',signal:AbortSignal.timeout(8000)});
+    if (!response.ok) throw new Error('Контент временно недоступен.');
+    const page = await response.json();
+    if (!Array.isArray(page)) throw new Error('Неверный ответ CMS.');
+    rows.push(...page);
+    if (page.length<500) return rows;
+  }
+}
 export async function getClient() {
   if (client) return client;
   const c = window.CMS_CONFIG;
