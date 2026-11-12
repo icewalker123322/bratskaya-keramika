@@ -1,0 +1,157 @@
+/* The original photographs remain untouched; a light, consistent colour grade
+   ties their daylight to the workshop's linen, clay and olive palette. */
+img[src^="/uploads/"] {
+  filter: saturate(.88) sepia(.075) contrast(.98) brightness(1.025);
+}
+.hero-art img[src^="/uploads/"] { object-position:50% 65%; }
+.course-image-button img[src^="/uploads/"] { object-position:50% 42%; }
+.kids-course>img[src^="/uploads/"] { object-position:50% 40%; }
+.together-art img[src^="/uploads/"] { object-position:50% 45%; }
+.gallery-feature>img[src^="/uploads/"] {
+  object-fit:contain;
+  background:var(--parchment);
+}
+.gallery-thumbs { overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:var(--wine) transparent; }
+.gallery-thumbs button { min-height:44px; }
+#lightbox-image { object-fit:contain; max-height:78vh; }
+
+/* Fixed stage: changing caption length must not recenter the photograph. */
+.gallery-browser { align-items:start; }
+.gallery-stage { align-self:start; }
+.gallery-feature { height:440px; }
+.gallery-feature>img[src^="/uploads/"] { display:block; height:100%; width:100%; }
+.gallery-aside { display:grid; grid-template-rows:44px 112px 88px 250px; gap:16px; }
+.gallery-aside h3,.gallery-aside>p,.gallery-thumbs { margin:0; }
+.gallery-aside h3 { align-self:center; }
+.gallery-thumbs { align-self:start; width:100%; height:250px; grid-auto-rows:76px; }
+.gallery-thumbs button { height:76px; overflow:hidden; }
+.gallery-thumbs img { display:block; width:100%; height:100%; aspect-ratio:auto; object-fit:cover; }
+.gallery-browser-controls { height:44px; margin-top:16px; }
+.course-price { font-variant-numeric:tabular-nums; }
+.course-card { display:flex; flex-direction:column; }
+.course-card .course-bottom { margin-top:auto; padding-top:24px; }
+.course-card .course-description { margin-bottom:24px; }
+.group-discount { padding:20px 0; margin-bottom:32px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.8; color:var(--muted); max-width:880px; }
+.regular-courses { border-top:1px solid var(--line); }
+.regular-intro { margin:24px 0; font-size:18px; color:var(--wood); }
+.regular-course { display:grid; grid-template-columns:1.2fr .45fr 1fr .9fr auto; align-items:center; gap:24px; padding:24px 0; border-bottom:1px solid var(--line); font-size:14px; }
+.regular-course h3 { font-family:var(--display); font-size:28px; font-weight:400; }
+.regular-course span,.regular-note { color:var(--muted); }
+.regular-course p { font-variant-numeric:tabular-nums; }
+.regular-note { margin-top:24px; font-size:14px; line-height:1.8; }
+.course-benefits { padding-block:32px 64px; }
+.course-benefits h2 { font-size:clamp(28px,3vw,40px); }
+.benefits-intro { margin-top:24px; max-width:760px; font-size:16px; line-height:1.8; color:var(--muted); }
+.benefits-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; margin-top:32px; }
+.benefits-grid article { border-top:1px solid var(--line); padding-top:24px; }
+.benefits-grid h3 { font-family:var(--display); font-size:26px; font-weight:400; }
+.benefits-grid p { margin-top:16px; font-size:14px; line-height:1.9; color:var(--muted); }
+[hidden] { display:none!important; }
+@media(max-width:850px) {
+ .regular-course { grid-template-columns:1fr 1fr; gap:16px; }
+ .regular-course h3 { grid-column:1/-1; }
+ .gallery-aside { grid-template-rows:44px 140px 112px 250px; }
+}
+@media(max-width:620px) {
+ .gallery-feature { height:320px; }
+ .gallery-aside { grid-template-rows:112px 88px 200px; gap:16px; }
+ .gallery-thumbs { height:200px; }
+ .benefits-grid { grid-template-columns:1fr; gap:24px; }
+ .regular-course { grid-template-columns:1fr; gap:12px; }
+ .regular-course .course-detail { justify-self:start; }
+ .course-benefits { padding-block:24px 48px; }
+}
+@media(max-width:360px) { .gallery-feature { height:280px; } }
+
+/* Matching the double arch of the main photograph. */
+.course-image-button,
+.course-card-secondary .course-image-button,
+.kids-photo-frame {
+ position:relative;
+ border:1px solid var(--wine);
+ border-radius:49% 49% 3px 3px;
+ padding:12px;
+ background:transparent;
+ overflow:hidden;
+}
+.course-image-button::after,
+.kids-photo-frame::after {
+ content:"";
+ position:absolute;
+ inset:6px;
+ border:1px solid #813b3250;
+ border-radius:inherit;
+ pointer-events:none;
+}
+.course-image-button img { border-radius:49% 49% 0 0; }
+.kids-photo-frame { width:100%; height:194px; padding:8px; }
+.kids-photo-frame::after { inset:4px; }
+.kids-photo-frame img { width:100%; height:100%; object-fit:cover; border-radius:49% 49% 0 0; }
+@media(max-width:620px) {
+ .course-image-button,.course-card-secondary .course-image-button { padding:9px; }
+ .course-image-button::after { inset:4px; }
+ .kids-photo-frame { height:156px; padding:6px; }
+ .kids-photo-frame::after { inset:3px; }
+}
+@media(max-width:360px) { .kids-photo-frame { height:136px; } }
+.november-day { display:grid; grid-template-columns:1fr 1.8fr; gap:32px; padding:24px 0; border-bottom:1px solid var(--line); }
+.november-day-heading h3,.booking-terms h3 { font-family:var(--display);font-size:28px;font-weight:400;line-height:1.3; }
+.november-day-heading>p { margin-top:8px;font-size:13px;color:var(--muted); }
+.november-events { display:grid;gap:16px;align-content:start; }
+.november-event { display:grid;grid-template-columns:132px minmax(0,1fr);gap:24px;font-size:14px;line-height:1.8; }
+.november-event>span { color:var(--wine);font-variant-numeric:tabular-nums; }
+.booking-terms { margin-top:48px;padding-top:24px;border-top:1px solid var(--line);max-width:880px; }
+.booking-terms p { margin-top:16px;font-size:14px;line-height:1.9;color:var(--muted); }
+#contact-info>p { white-space:pre-line; }
+@media(max-width:620px) {
+ .november-day { grid-template-columns:1fr;gap:20px; }
+ .november-event { grid-template-columns:100px minmax(0,1fr);gap:16px; }
+ .november-day-heading h3 { font-size:26px; }
+}
+
+/* Slightly larger photographs in the two children's course rows. */
+.booking-bot-link { margin-block:20px;max-width:100%;white-space:normal;text-align:center; }
+@media(max-width:620px) { .booking-bot-link { width:100%;font-size:13px; } }
+.november-event { grid-template-columns:132px minmax(0,1fr) minmax(140px,.65fr); }
+.november-event>.schedule-event-price { color:var(--wood);text-align:right;font-variant-numeric:tabular-nums; }
+@media(max-width:850px) {
+ .november-event { grid-template-columns:112px minmax(0,1fr);gap:8px 16px; }
+ .november-event>.schedule-event-price { grid-column:2;text-align:left; }
+}
+@media(max-width:620px) { .november-event { grid-template-columns:100px minmax(0,1fr); } }
+.dialog-photo-frame {
+ position:relative;
+ width:190px;
+ height:244px;
+ padding:12px;
+ border:1px solid var(--wine);
+ border-radius:49% 49% 3px 3px;
+ overflow:hidden;
+}
+.dialog-photo-frame::after {
+ content:"";
+ position:absolute;
+ inset:6px;
+ border:1px solid #813b3250;
+ border-radius:inherit;
+ pointer-events:none;
+}
+.dialog-intro .dialog-photo-frame img { width:100%;height:100%;border-radius:49% 49% 0 0;object-fit:cover; }
+@media(max-width:620px) {
+ .dialog-photo-frame { width:166px;height:189px;padding:9px; }
+ .dialog-photo-frame::after { inset:4px; }
+}
+.kids-course { grid-template-columns:152px minmax(0,1fr); }
+.kids-photo-frame { height:224px; }
+@media(max-width:850px) {
+ .kids-course { grid-template-columns:112px minmax(0,1fr); }
+ .kids-photo-frame { height:184px; }
+}
+@media(max-width:620px) {
+ .kids-course { grid-template-columns:104px minmax(0,1fr); }
+ .kids-photo-frame { height:176px; }
+}
+@media(max-width:360px) {
+ .kids-course { grid-template-columns:88px minmax(0,1fr); }
+ .kids-photo-frame { height:152px; }
+}

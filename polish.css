@@ -1,0 +1,86 @@
+/* Focused polish using unslop by Damir Sokolovsky (@heydamir), CC BY 4.0.
+   Existing typefaces, palette, artwork, logo and section order are retained. */
+
+/* 1. Spacing: consistent groups, card baselines and touch areas. */
+.hero-controls{gap:16px;margin-top:32px}.hero-topics{gap:24px;margin-bottom:32px}
+.course-grid{gap:48px 32px}.course-card{display:flex;flex-direction:column}.course-subtitle{margin:24px 0 8px}
+.course-description{margin-top:12px;margin-bottom:20px}.course-bottom{margin-top:auto;padding-top:16px}
+.section-top{margin-bottom:32px}.together-grid,.kids-section{gap:80px}.kids-courses{gap:32px}.kids-course{gap:24px;padding-bottom:24px}
+.gallery-browser{gap:64px}.gallery-thumbs{gap:12px;margin-top:24px}.gallery-aside h3{margin-top:24px}.gallery-aside>p{margin-top:16px}
+.icon-button,.hero-controls .icon-button{width:44px;height:44px;flex-shrink:0}
+.filter,.course-detail,.schedule-views button,.schedule-view-bar>.text-link,.hero-topics button{min-height:44px}
+.course-detail{padding:8px 0}.filters{gap:8px;padding-bottom:16px}.schedule-views button{padding:8px 16px}
+.desktop-nav a,.section-nav a{display:inline-flex;align-items:center;min-height:40px}
+.section-nav{padding-block:8px}.hero-topics button{padding-block:16px}
+
+/* 2. Color: material texture supports the content, and focus remains visible. */
+body::before{opacity:.025}
+.footer-logo-transparent{position:relative;display:block;width:240px;max-width:100%}
+.footer-logo-transparent img{display:block;width:100%;height:auto}
+.footer-logo-transparent .footer-logo-lettering{position:absolute;inset:0;clip-path:inset(0 0 0 35%);filter:brightness(0) invert(1)}
+.site-header .brand-logo-linen{width:240px;max-width:100%;height:auto;object-fit:contain}
+@media(max-width:620px){.site-header .brand-logo-linen{width:190px}}
+.schedule-section{--muted:#6b5949}
+:is(.about-section,.together-section,footer) :is(a,button):focus-visible{outline-color:var(--paper)}
+.hero-topics button:focus-visible,.gallery-thumbs button:focus-visible{outline-offset:2px}
+
+/* 3. Icons: a consistent box for actionable arrows; ornaments retain their scale. */
+.button svg,.course-detail svg{width:20px;height:20px}
+
+/* 4–5. Copy and type: readable supporting text; established Cyrillic families stay. */
+.hero-description{font-size:16px;line-height:1.8}.desktop-nav{font-size:13px}.section-nav{font-size:12px}
+.course-description,.about-copy>p:not(.section-index),.kids-intro>p:not(.section-index),.kids-course h3+p,
+.process-grid p,.gallery-aside>p,.faq-section details p,.dialog-description,.together-copy>p:not(.section-index){font-size:14px;line-height:1.8}
+.section-intro,.course-price,.text-link,.faq-section summary{font-size:14px}
+.course-subtitle,.section-index,.eyebrow,.hero-art figcaption,.course-art-label,.course-price.unset,.course-meta,
+.kids-course-bottom>span,.schedule-footnote,.schedule-filter,.session-date span,.session-note,.footer-bottom,
+.consent,.together-art figcaption,.gallery-expand,.hero-topics button,.schedule-view-bar>.text-link{font-size:12px;line-height:1.6;letter-spacing:0}
+.kids-course .course-subtitle{font-size:12px}.filter,.course-detail,.kids-course-bottom .course-detail{font-size:13px}
+.footer-grid p,.footer-grid nav a,.contact-link,.footer-grid h3{font-size:13px}
+.hero-art figcaption{gap:8px;flex-wrap:wrap}.hero-art figcaption>span:last-child{font-size:11px}
+.art-seal{font-size:11px}.hero-count,.course-price,.session-time,.session-date,.gallery-browser-controls>span{font-variant-numeric:tabular-nums}
+.hero-note span{font-style:normal}.dialog-intro p{font-size:12px}
+
+/* 6–7. Layout and details: stable rows, intentional wraps and dark-section focus. */
+.hero-copy,.course-card,.kids-course>div{min-width:0}.hero-controls{flex-wrap:wrap}
+.guest-courses{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.guest-course{border-block:1px solid var(--line);padding:24px 0;display:flex;flex-direction:column;align-items:flex-start}
+.guest-course h3{font-family:var(--display);font-size:28px;font-weight:400;line-height:1.2}.guest-course p{font-size:14px;color:var(--muted);margin:12px 0 16px}.guest-course .course-bottom{align-self:stretch;width:100%;border-top:0}
+[data-copy]{white-space:pre-line}.footer-grid [data-copy]{font-size:13px}
+
+/* 8. Visuals: retain user logo and explicitly temporary artwork until photos arrive. */
+.hero-art .arch-frame,.course-image-button{isolation:isolate}
+.closing>p .closing-main{color:var(--wood)}
+.admin-body .editor-tabs button,.admin-body .delete-button,.admin-body .remove-image,.admin-body .toolbar-actions .text-link{min-height:44px}
+.admin-body :is(.field-help,.admin-hint,.image-placeholder,.request-card small,.admin-header .text-link){font-size:12px}
+.admin-body .editor-section .form-grid{gap:8px 24px}.admin-body .editor-section{padding:24px}.admin-body .editor-tabs{gap:8px}
+.admin-body #save-status{font-size:12px}
+
+/* 9. Motion: restrained feedback using one easing curve. */
+.button,.icon-button,.text-link,.desktop-nav a,.hero-topics button{transition-duration:160ms;transition-timing-function:cubic-bezier(.22,1,.36,1)}
+.button:hover{transform:none}.button:active{transform:translateY(1px)}.course-image-button img{transition:transform 300ms cubic-bezier(.22,1,.36,1)}
+.course-image-button:hover img{transform:scale(1.015)}
+@media(max-width:1150px){.desktop-nav{font-size:12px;gap:24px}.section-nav{gap:16px;overflow-x:auto;justify-content:flex-start}.hero-description{font-size:15px}.together-grid,.kids-section{gap:48px}.gallery-browser{gap:32px}.course-grid{gap:40px 24px}}
+@media(max-width:850px){.desktop-nav{font-size:11px;gap:16px}.hero-description{font-size:14px}.hero-topics{gap:16px}.hero-topics button{font-size:11px}.kids-section{gap:32px}.kids-course{grid-template-columns:85px minmax(0,1fr);gap:16px}.kids-course>img{width:85px}.gallery-browser{gap:24px}.course-description,.about-copy>p:not(.section-index),.process-grid p{font-size:13px}.hero-controls>svg{width:64px}}
+@media(max-width:620px){
+  .admin-body :is(input,textarea,select){font-size:16px}.admin-body .editor-section{padding:20px}.admin-body .editor-tabs button{font-size:12px}
+  .hero{padding-block:24px;gap:24px}.hero-copy{min-height:0}.hero-copy h1{min-height:0;display:block;overflow-wrap:normal}.hero-copy h1 br{display:initial}
+  .hero-description{font-size:14px;line-height:1.8;min-height:0;margin-top:20px}.hero-actions{gap:8px;margin-top:24px}.hero-actions .text-link{font-size:13px;min-height:44px}.hero-controls{margin-top:20px}
+  .hero-topics{gap:0 20px;margin-bottom:24px}.hero-topics button{font-size:11px;padding-block:12px}.hero-art{width:88%}
+  .hero-art figcaption{flex-direction:column;gap:0;font-size:11px}.art-seal{width:92px;height:92px;font-size:11px;bottom:64px}
+  .eyebrow,.section-index,.course-subtitle,.kids-course .course-subtitle,.course-art-label,.kids-course-bottom>span,.footer-bottom,
+  .schedule-footnote,.session-date span,.session-note,.together-art figcaption,.gallery-expand,.schedule-view-bar>.text-link{font-size:11px}
+  .section-intro,.course-description,.about-copy>p:not(.section-index),.kids-intro>p:not(.section-index),.kids-course h3+p,
+  .gallery-aside>p,.faq-section details p,.dialog-description,.together-copy>p:not(.section-index),.process-grid p{font-size:14px}
+  .filter,.course-price.unset,.course-detail,.kids-course-bottom .course-detail,.hero-controls>span{font-size:12px}.filters{gap:4px}
+  .section-top{gap:16px;margin-bottom:24px}.course-grid{gap:40px}.course-subtitle{margin-top:20px}.kids-section,.together-grid{gap:32px}
+  .kids-course{grid-template-columns:88px minmax(0,1fr);gap:16px}.kids-course>img{width:88px;height:140px}.kids-course h3{font-size:25px}
+  .kids-course-bottom{gap:8px;margin-top:16px}.kids-intro .text-link{min-height:44px}.process-grid{gap:32px 24px}.process-grid p{max-width:none}
+  .gallery-browser{gap:24px}.gallery-thumbs{gap:8px}.gallery-aside>p{margin-top:12px}.gallery-aside h3{font-size:28px}
+  .schedule-view-bar{flex-wrap:wrap;gap:8px}.schedule-view-bar>.text-link{max-width:none}.month-picker{gap:8px}.month-picker h3{font-size:13px}
+  .faq-section summary{font-size:14px}.footer-grid p,.footer-grid nav a,.footer-grid h3{font-size:13px}
+  .session-row{grid-template-columns:minmax(0,1fr) auto;gap:12px}.session-info{min-width:0}.session-title{font-size:14px}.session-row .button{min-height:44px;font-size:12px}
+  .dialog-intro p,.consent,.booking-notice p{font-size:12px}.guest-courses{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:360px){.kids-course{grid-template-columns:72px minmax(0,1fr)}.kids-course>img{width:72px;height:120px}.kids-course h3{font-size:22px}.process-grid{gap:24px 16px}.hero-topics{gap:0 12px}}
+@media(prefers-reduced-motion:reduce){.button:active,.course-image-button:hover img{transform:none}}
