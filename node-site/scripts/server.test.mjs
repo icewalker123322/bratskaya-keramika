@@ -36,7 +36,7 @@ try {
   });
   await test('disabled booking rejects applications and content is validated', async () => {
     assert.equal((await call('/api/requests','POST',{})).status,409);
-    assert.equal((await call('/api/admin/content','PUT',{...content,phone:'',email:'',bookingEnabled:true},true)).status,400);
+    assert.equal((await call('/api/admin/content','PUT',{...content,bookingEnabled:true},true)).status,400);
     assert.equal((await call('/api/admin/content','PUT',{...content,heroImage:'javascript:alert(1)'},true)).status,400);
     assert.equal((await call('/api/admin/content','PUT',{...content,socialUrl:'javascript:alert(1)'},true)).status,400);
     assert.equal((await call('/api/admin/content','PUT',{...content,sessions:[{id:'x',courseId:'wheel',date:'2027-02-30',time:'12:00',note:''}]},true)).status,400);
