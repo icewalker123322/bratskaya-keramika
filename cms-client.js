@@ -1,4 +1,4 @@
-export const BUCKET = 'site-images';
+﻿export const BUCKET = 'site-images';
 export const MAX_FILE = 5 * 1024 * 1024;
 let client;
 export async function publicContent() {
@@ -58,3 +58,4 @@ export async function validateImage(file) {
   if (!valid) throw new Error('Максимальное разрешение — 12000 × 12000.');
   return type;
 }
+

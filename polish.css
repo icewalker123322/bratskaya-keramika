@@ -1,4 +1,4 @@
-/* Focused polish using unslop by Damir Sokolovsky (@heydamir), CC BY 4.0.
+﻿/* Focused polish using unslop by Damir Sokolovsky (@heydamir), CC BY 4.0.
    Existing typefaces, palette, artwork, logo and section order are retained. */
 
 /* 1. Spacing: consistent groups, card baselines and touch areas. */
@@ -84,3 +84,4 @@ body::before{opacity:.025}
 }
 @media(max-width:360px){.kids-course{grid-template-columns:72px minmax(0,1fr)}.kids-course>img{width:72px;height:120px}.kids-course h3{font-size:22px}.process-grid{gap:24px 16px}.hero-topics{gap:0 12px}}
 @media(prefers-reduced-motion:reduce){.button:active,.course-image-button:hover img{transform:none}}
+

@@ -1,4 +1,4 @@
-import {getClient,content,safeURL,validateImage,BUCKET} from '../cms-client.js';
+﻿import {getClient,content,safeURL,validateImage,BUCKET} from '../cms-client.js';
 import {OWNER_LOGIN,resolveLogin} from './auth-config.js';
 const $=s=>document.querySelector(s);
 const create=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
@@ -71,3 +71,4 @@ function renderPhotos(host){const intro=create('div','panel');intro.append(creat
 }
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
 try{db=await getClient();$('#connection').textContent='Вход доступен только владельцу сайта.';db.auth.onAuthStateChange(event=>{if(event==='SIGNED_OUT')lock();});const {data,error}=await db.auth.getSession();if(error)throw error;if(data.session)await run(enter);}catch(e){$('#connection').textContent=e.message;notify(e.message,true);}
+

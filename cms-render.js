@@ -1,4 +1,4 @@
-import { safeURL } from './cms-client.js';
+﻿import { safeURL } from './cms-client.js';
 const node = (tag, cls, text) => {
   const n = document.createElement(tag);
   if (cls) n.className = cls;
@@ -47,3 +47,4 @@ export function applyContent(rows) {
   if(settings){document.title=settings.title;document.querySelector('meta[name="description"]').content=settings.description;}
   document.dispatchEvent(new Event('cms:updated'));
 }
+

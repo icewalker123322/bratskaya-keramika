@@ -1,4 +1,4 @@
-import {siteSettings} from './site-settings.js';
+﻿import {siteSettings} from './site-settings.js';
 export function renderWorkshopInfo(content) {
   const settings={...siteSettings,...content.siteSettings};
   const contacts=document.querySelector('#contact-info');
@@ -71,3 +71,4 @@ export function renderWorkshopInfo(content) {
   for(let i=1;i<=3;i++){put(`.benefits-grid article:nth-child(${i}) h3`,settings[`benefit${i}Title`]);put(`.benefits-grid article:nth-child(${i}) p`,settings[`benefit${i}Text`]);}
   put('.about-art figcaption',settings.aboutCaption);put('#together-caption',settings.togetherCaption);put('.gallery-aside>p',settings.galleryText);put('.schedule-footnote',settings.scheduleFootnote);
 }
+

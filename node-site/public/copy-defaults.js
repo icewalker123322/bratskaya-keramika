@@ -1,4 +1,4 @@
-// Shared defaults keep older content files compatible with the section editor.
+﻿// Shared defaults keep older content files compatible with the section editor.
 export const copyGroups = [
   ['Каталог', [
     ['classesTitle', 'Заголовок', 'Что сотворим?'],
@@ -37,3 +37,4 @@ export const copyGroups = [
   ]]
 ];
 export const copyDefaults = Object.fromEntries(copyGroups.flatMap(([,fields])=>fields.map(([key,,value])=>[key,value])));
+

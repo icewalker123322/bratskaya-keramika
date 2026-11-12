@@ -2,7 +2,7 @@
 import { renderWorkshopInfo } from './workshop-info.js';
 const $ = s => document.querySelector(s);
 const escape = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const icon = name => `<svg aria-hidden="true"><use href="/assets/ornaments.svg#${name}"/></svg>`;
+const icon = name => `<svg aria-hidden="true"><use href="./assets/ornaments.svg#${name}"/></svg>`;
 const artwork = c => c.image || `/assets/${c.art === 'wheel' ? 'pottery' : c.art}.svg`;
 const courseDialog = $('#course-dialog');
 let content;
@@ -56,7 +56,7 @@ document.addEventListener('click', event => {
 });
 
 function prepareHero() {
-  heroSlides = [{label:'Мастерская', title:content.heroTitle, text:content.heroText, eyebrow:content.tagline, image:content.heroImage || '/assets/pottery.svg', photo:Boolean(content.heroImage), cta:'Выбрать мастер-класс', href:'#classes'}];
+  heroSlides = [{label:'Мастерская', title:content.heroTitle, text:content.heroText, eyebrow:content.tagline, image:content.heroImage || './assets/pottery.svg', photo:Boolean(content.heroImage), cta:'Выбрать мастер-класс', href:'#classes'}];
   const hand = content.courses.find(c => c.id === 'handbuilding');
   const date = content.courses.find(c => c.id === 'date');
   const kids = content.courses.find(c => c.category === 'kids');
@@ -124,12 +124,12 @@ function renderMasters() {
 
 function prepareGallery() {
   galleryItems = content.gallery.length ? content.gallery : [
-    {image:'/assets/pair.svg',caption:'У каждой вещи свой характер · эскиз'},
-    {image:'/assets/pottery.svg',caption:'Всё начинается с глины · эскиз'},
-    {image:'/assets/cup.svg',caption:'Тепло, которое можно держать · эскиз'}
+    {image:'./assets/pair.svg',caption:'У каждой вещи свой характер · эскиз'},
+    {image:'./assets/pottery.svg',caption:'Всё начинается с глины · эскиз'},
+    {image:'./assets/cup.svg',caption:'Тепло, которое можно держать · эскиз'}
   ];
   $('#gallery-note').textContent=content.gallery.length?content.copy.galleryIntro:'Скоро здесь появятся фотографии занятий и первых работ. Пока — эскизы будущей галереи.';
-  $('#gallery-grid').innerHTML=`<div class="gallery-stage"><button class="gallery-feature" data-gallery="0" aria-label="Открыть изображение"><img id="gallery-feature-image" alt="" width="900" height="600" loading="lazy"><span class="gallery-expand" aria-hidden="true">Рассмотреть ↗</span></button><div class="gallery-browser-controls"><button class="icon-button" id="gallery-prev" aria-label="Предыдущее изображение">←</button><span id="gallery-position"></span><button class="icon-button" id="gallery-next" aria-label="Следующее изображение">→</button></div></div><div class="gallery-aside"><svg class="small-sun" aria-hidden="true"><use href="/assets/ornaments.svg#sun"/></svg><h3 id="gallery-feature-caption"></h3><p>${content.gallery.length?'Взгляните на мастерскую поближе. Здесь каждый предмет хранит след прикосновения.':'Здесь будут настоящие моменты мастерской: знакомство с глиной, работа за кругом и вещи, сделанные с душой.'}</p><div class="gallery-thumbs" role="group" aria-label="Выбрать изображение">${galleryItems.map((g,i)=>`<button data-gallery-select="${i}" aria-label="Изображение ${i+1}: ${escape(g.caption)}" aria-pressed="false"><img src="${escape(g.image)}" alt="" width="100" height="100" loading="lazy"></button>`).join('')}</div></div>`;
+  $('#gallery-grid').innerHTML=`<div class="gallery-stage"><button class="gallery-feature" data-gallery="0" aria-label="Открыть изображение"><img id="gallery-feature-image" alt="" width="900" height="600" loading="lazy"><span class="gallery-expand" aria-hidden="true">Рассмотреть ↗</span></button><div class="gallery-browser-controls"><button class="icon-button" id="gallery-prev" aria-label="Предыдущее изображение">←</button><span id="gallery-position"></span><button class="icon-button" id="gallery-next" aria-label="Следующее изображение">→</button></div></div><div class="gallery-aside"><svg class="small-sun" aria-hidden="true"><use href="./assets/ornaments.svg#sun"/></svg><h3 id="gallery-feature-caption"></h3><p>${content.gallery.length?'Взгляните на мастерскую поближе. Здесь каждый предмет хранит след прикосновения.':'Здесь будут настоящие моменты мастерской: знакомство с глиной, работа за кругом и вещи, сделанные с душой.'}</p><div class="gallery-thumbs" role="group" aria-label="Выбрать изображение">${galleryItems.map((g,i)=>`<button data-gallery-select="${i}" aria-label="Изображение ${i+1}: ${escape(g.caption)}" aria-pressed="false"><img src="${escape(g.image)}" alt="" width="100" height="100" loading="lazy"></button>`).join('')}</div></div>`;
   $('#gallery-prev').addEventListener('click',()=>showGallery(galleryIndex-1));
   $('#gallery-next').addEventListener('click',()=>showGallery(galleryIndex+1));
   showGallery(0);
@@ -176,7 +176,7 @@ function openCourse(id, sessionId = '') {
     if (values.phone.replace(/\D/g, '').length < 7) { message.className = 'form-message error'; message.textContent = 'Укажите телефон, по которому с вами можно связаться.'; return; }
     button.disabled = true; message.className = 'form-message'; message.textContent = 'Сохраняем заявку…';
     try {
-      const response = await fetch('/api/requests', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...values, consent: values.consent === 'on', courseId: id, requestId }) }); const result = await response.json(); if (!response.ok) throw new Error(result.error);
+      const response = await fetch('./api/requests', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...values, consent: values.consent === 'on', courseId: id, requestId }) }); const result = await response.json(); if (!response.ok) throw new Error(result.error);
       form.innerHTML = `<h3>Заявка получена</h3><p class="form-message success" role="status">Она сохранена для мастерской. Дождитесь ответа, чтобы подтвердить дату и время.</p>${contactLinks()}`;
     } catch (e) { message.className = 'form-message error'; message.textContent = e.message || 'Не удалось отправить заявку. Попробуйте ещё раз.'; button.disabled = false; }
   });
@@ -213,10 +213,10 @@ function render() {
     b.textContent = content.name;
     b.parentElement.setAttribute('aria-label', `${content.name} — на главную`);
     b.parentElement.querySelector('svg').toggleAttribute('hidden', Boolean(content.logoImage));
-    if (content.logoImage === '/assets/brand/logo-poster.png' && b.closest('.site-header')) {
-      b.innerHTML = `<img class="brand-logo brand-logo-linen" src="/assets/brand/logo-linen.png" alt="${escape(content.name)}" width="1952" height="832">`;
-    } else if (content.logoImage === '/assets/brand/logo-poster.png') {
-      b.innerHTML = `<span class="footer-logo-transparent"><img src="/assets/brand/logo-linen.png" alt="${escape(content.name)}" width="1952" height="832"><img class="footer-logo-lettering" src="/assets/brand/logo-linen.png" alt="" aria-hidden="true" width="1952" height="832"></span>`;
+    if (content.logoImage === './assets/brand/logo-poster.png' && b.closest('.site-header')) {
+      b.innerHTML = `<img class="brand-logo brand-logo-linen" src="./assets/brand/logo-linen.png" alt="${escape(content.name)}" width="1952" height="832">`;
+    } else if (content.logoImage === './assets/brand/logo-poster.png') {
+      b.innerHTML = `<span class="footer-logo-transparent"><img src="./assets/brand/logo-linen.png" alt="${escape(content.name)}" width="1952" height="832"><img class="footer-logo-lettering" src="./assets/brand/logo-linen.png" alt="" aria-hidden="true" width="1952" height="832"></span>`;
     } else if (content.logoImage) {
       b.innerHTML = `<img class="brand-logo" src="${escape(content.logoImage)}" alt="${escape(content.name)}">`;
     }
@@ -243,4 +243,5 @@ async function load() {
   catch { $('#course-grid').innerHTML = '<div class="error-banner">Не удалось загрузить занятия. Проверьте соединение и <button id="retry-load" class="text-link">попробуйте ещё раз</button>.</div>'; $('#retry-load').addEventListener('click', load); }
 }
 renderSchedule(); load();
+
 

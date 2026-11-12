@@ -1,4 +1,4 @@
-import { publicContent } from './cms-client.js';
+﻿import { publicContent } from './cms-client.js';
 import { applyContent } from './cms-render.js';
 if (window.CMS_CONFIG?.url && window.CMS_CONFIG?.publishableKey) {
   try {
@@ -7,3 +7,4 @@ if (window.CMS_CONFIG?.url && window.CMS_CONFIG?.publishableKey) {
     applyContent(rows.filter(row=>row.published));
   } catch(error) { console.warn('CMS: показано исходное содержимое сайта.', error.message); }
 }
+

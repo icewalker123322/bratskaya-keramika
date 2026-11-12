@@ -1,4 +1,4 @@
-import { siteSettings } from './site-settings.js';
+﻿import { siteSettings } from './site-settings.js';
 import { scheduleEditor } from './admin-schedule.js';
 import { copyDefaults, copyGroups } from './copy-defaults.js';
 const $ = s => document.querySelector(s);
@@ -124,3 +124,4 @@ $('#save-content').addEventListener('click', async () => {
 $('#logout').addEventListener('click', async () => { if (dirty && !confirm('Выйти без сохранения изменений?')) return; try { await api('/api/admin/logout',{method:'POST'}); dirty = false; data = null; $('#editor').hidden = true; $('#login-panel').hidden = false; $('#save-status').textContent = 'Изменений нет'; } catch(e) { message(e.message,true); } });
 window.addEventListener('beforeunload', e => { if (dirty || uploading) { e.preventDefault(); e.returnValue = ''; } });
 api('/api/admin/session').then(openEditor).catch(() => {});
+

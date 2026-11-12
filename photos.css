@@ -1,13 +1,13 @@
-/* The original photographs remain untouched; a light, consistent colour grade
+﻿/* The original photographs remain untouched; a light, consistent colour grade
    ties their daylight to the workshop's linen, clay and olive palette. */
-img[src^="/uploads/"] {
+img[src^="./uploads/"] {
   filter: saturate(.88) sepia(.075) contrast(.98) brightness(1.025);
 }
-.hero-art img[src^="/uploads/"] { object-position:50% 65%; }
-.course-image-button img[src^="/uploads/"] { object-position:50% 42%; }
-.kids-course>img[src^="/uploads/"] { object-position:50% 40%; }
-.together-art img[src^="/uploads/"] { object-position:50% 45%; }
-.gallery-feature>img[src^="/uploads/"] {
+.hero-art img[src^="./uploads/"] { object-position:50% 65%; }
+.course-image-button img[src^="./uploads/"] { object-position:50% 42%; }
+.kids-course>img[src^="./uploads/"] { object-position:50% 40%; }
+.together-art img[src^="./uploads/"] { object-position:50% 45%; }
+.gallery-feature>img[src^="./uploads/"] {
   object-fit:contain;
   background:var(--parchment);
 }
@@ -19,7 +19,7 @@ img[src^="/uploads/"] {
 .gallery-browser { align-items:start; }
 .gallery-stage { align-self:start; }
 .gallery-feature { height:440px; }
-.gallery-feature>img[src^="/uploads/"] { display:block; height:100%; width:100%; }
+.gallery-feature>img[src^="./uploads/"] { display:block; height:100%; width:100%; }
 .gallery-aside { display:grid; grid-template-rows:44px 112px 88px 250px; gap:16px; }
 .gallery-aside h3,.gallery-aside>p,.gallery-thumbs { margin:0; }
 .gallery-aside h3 { align-self:center; }
@@ -155,3 +155,4 @@ img[src^="/uploads/"] {
  .kids-course { grid-template-columns:88px minmax(0,1fr); }
  .kids-photo-frame { height:152px; }
 }
+
