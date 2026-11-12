@@ -1,0 +1,9 @@
+node_modules/
+data/content.json
+data/requests.json
+data/admin-password.txt
+data/*.tmp
+public/uploads/
+.qa/
+.env*
+*.log

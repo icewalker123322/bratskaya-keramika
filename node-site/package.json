@@ -1,0 +1,14 @@
+{
+  "name": "goncharnaya-masterskaya",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Сайт гончарной мастерской с локальным редактором",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/admin.js && node --check public/copy-defaults.js",
+    "test": "node --test scripts/server.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

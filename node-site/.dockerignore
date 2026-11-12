@@ -1,0 +1,8 @@
+.git
+.qa
+node_modules
+data/content.json
+data/requests.json
+data/admin-password.txt
+public/uploads
+.env*

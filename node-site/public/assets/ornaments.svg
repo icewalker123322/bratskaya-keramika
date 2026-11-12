@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="sun" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="50" cy="50" r="19"/><circle cx="50" cy="50" r="12"/><path d="M50 4v19m0 54v19M4 50h19m54 0h19M17 17l14 14m38 38 14 14M17 83l14-14m38-38 14-14M32 7l8 19m20 48 8 19M7 32l19 8m48 20 19 8M7 68l19-8m48-20 19-8M32 93l8-19m20-48 8-19"/><path d="m50 39 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/></g></symbol>
+  <symbol id="sprig" viewBox="0 0 200 60"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 45Q93 51 188 12M40 46Q20 24 28 15q23 8 20 30M68 43Q52 17 62 9q18 13 15 31M98 35Q89 12 101 5q14 14 7 27M126 27q2-21 15-23 6 16-5 19M52 45q8 18 27 12-3-15-16-14M88 39q13 16 30 8-7-15-19-11M124 28q13 13 27 3-8-10-18-6"/></g></symbol>
+  <symbol id="brand" viewBox="0 0 80 90"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M15 26 40 7l25 19v47H15Z"/><path d="M9 28 40 3l31 25M21 77h38M28 82h24M29 35h22l-3 12c12 10 12 20-8 20s-20-10-8-20Z"/><path d="M29 35q11 6 22 0M26 56q14 7 28 0M26 61q14 6 28 0M39 19h2m-1-4v9m-5-4h10"/></g></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="flower" viewBox="0 0 70 70"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M35 35C5-8 65-8 35 35c43-30 43 30 0 0 30 43-30 43 0 0-43 30-43-30 0 0Z"/><path d="m35 16 4 15 15 4-15 4-4 15-4-15-15-4 15-4Z"/></g></symbol>
+</svg>
